@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download my files</title>
+    <style>
+        .menu {
+            padding: 20px;
+            margin: auto;
+            width: 50%;
+            border: 1px #555 solid;
+            border-radius: 5px;
+            margin-top: 100px;
+            background-color: rgb(250, 250, 250);
+            box-shadow: -1px 1px 54px -14px rgba(0,0,0,0.34);
+                        -webkit-box-shadow: -1px 1px 54px -14px rgba(0,0,0,0.34);
+                        -moz-box-shadow: -1px 1px 54px -14px rgba(0,0,0,0.34);
+        }
+        .par {
+            border-left: 3px solid black;
+            padding-left: 10px;
+        }
+        .title {
+            border-bottom: 2px solid #555;
+        }
+        .date {
+            font-style: italic;
+            color:rgb(144, 144, 144)
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <h1 class="title">Download My Files</h1>
+        <form action="" method="post">
+            <p class="par">Lastly uploaded (7)</p>
+            <input type="radio" id="op1" name="download" value="IMG_1425.NEF">
+            <label for="op1" class="row">IMG_1425.NEF</label> <span class="date"> - Mar 22 2023 10:22 AM</span>
+            <br>
+
+            <input type="radio" id="op2" name="download" value="VID_0022.MOV">
+            <label for="op2" class="row">VID_0022.MOV</label> <span class="date"> - Mar 22 2023 10:21 AM</span>
+            <br>
+
+            <input type="radio" id="op3" name="download" value="MyApp.apk">
+            <label for="op3" class="row">MyApp.apk</label> <span class="date"> - Mar 22 2023 8:05 AM</span>
+            <br>
+            
+            <input type="radio" id="op4" name="download" value="my-passwords (1).txt">
+            <label for="op4" class="row">my-passwords (1).txt</label> <span class="date"> - Jan 15 2022 05:30 PM</span>
+            <br>
+            
+            <input type="radio" id="op5" name="download" value="my-passwords.txt">
+            <label for="op5" class="row">my-passwords.txt</label> <span class="date"> - Jan 03 2022 02:12 PM</span>
+            <br>
+            
+            <input type="radio" id="op6" name="download" value="secret.txt">
+            <label for="op6" class="row">secret.txt</label> <span class="date"> - Sep 11 2021 9:02 AM</span>
+            <br>
+            
+            <input type="radio" id="op7" name="download" value="templates.py">
+            <label for="op7" class="row">templates.py</label> <span class="date"> - Dec 05 2020 8:33 PM</span>
+            <br>
+            <br>
+
+            <div class="input flex">
+                <input maxlength="6" name="download" placeholder="s">
+                <input type="submit" id="download" value="Download">
+            </div>
+
+            {% if msg %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+            {% endif %}
+                
+        </form>
+    </div>
+    
+</body>
+</html>
