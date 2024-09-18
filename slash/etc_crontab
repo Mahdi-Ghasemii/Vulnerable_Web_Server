@@ -5,7 +5,7 @@
 # that none of the other crontabs do.
 
 SHELL=/bin/sh
-# PATH=/tmp:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+PATH=/tmp:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # Example of job definition:
 # .---------------- minute (0 - 59)
@@ -19,6 +19,5 @@ SHELL=/bin/sh
 25 6    * * *   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
 47 6    * * 7   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
 52 6    1 * *   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
-*  *    * * *   root    echo "i am mahdi"
 *  *    * * *   root    /usr/bin/curl -K /home/F30s/site_check
-*  *    * * *   F30s    bash -lc '/tmp/cat /home/F30s/health_check > /tmp/log.txt'
+*  *    * * *   F30s    bash -lc '/tmp/cat /home/F30s/health_check'

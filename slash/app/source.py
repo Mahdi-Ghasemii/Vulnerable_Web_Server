@@ -3,7 +3,6 @@ import hashlib
 import os
 import ip # from .
 import debugpassword # from .
-import pwn
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
