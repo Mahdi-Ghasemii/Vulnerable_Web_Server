@@ -10,12 +10,3 @@ services:
     networks:
       net1:
         ipv4_address: 172.20.0.4
-
-networks:
-  net1:
-    # external: true
-    ipam:
-      driver: bridge
-      config:
-        - subnet: 172.20.0.0/24
-      
