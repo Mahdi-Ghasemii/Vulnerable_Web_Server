@@ -41,5 +41,5 @@ jobs:
         run: |
           docker push mahdi2359/vulnerable_ubuntu:latest
 
-       - name: Log out from DockerHub
+      - name: Log out from DockerHub
         run: docker logout
