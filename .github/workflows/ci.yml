@@ -8,7 +8,7 @@ on:
   release:
 
 jobs:
-  setup:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
