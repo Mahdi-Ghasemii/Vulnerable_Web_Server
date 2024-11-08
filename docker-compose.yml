@@ -7,6 +7,3 @@ services:
       dockerfile: Dockerfile
     image: mahdi2359/vulnerable_ubuntu
     restart: always
-    networks:
-      net1:
-        ipv4_address: 172.20.0.4
