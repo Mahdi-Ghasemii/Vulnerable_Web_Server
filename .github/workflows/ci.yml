@@ -36,3 +36,10 @@ jobs:
       - name: Tag Latest Docker Images
         run: |
           docker tag mahdi2359/vulnerable_ubuntu mahdi2359/vulnerable_ubuntu:latest
+
+      - name: Push Image to Docker Hub
+        run: |
+          docker push mahdi2359/vulnerable_ubuntu:latest
+
+       - name: Log out from DockerHub
+        run: docker logout
