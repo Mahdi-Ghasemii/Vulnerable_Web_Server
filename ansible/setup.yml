@@ -1,0 +1,80 @@
+# ---
+
+- hosts: all
+  become: yes
+  remote_user: vagrant
+  tasks:
+    # - name: Update package list
+    #   ansible.builtin.apt:
+    #     upgrade: yes
+    #     update_cache: yes
+
+    - name: install Some Needed Packages
+      apt:
+        name: ["curl", "cron", "nano"] # install systemctl
+        state: present
+
+    - name: Install some python packages
+      apt:
+        name: ["python3-pip", "python3-flask"] # install pwntools
+
+    - name: Copy script file
+      copy:
+        src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/script.sh
+        dest: /home/vagrant/script.sh
+        owner: vagrant
+        group: vagrant
+        mode: "0755"
+
+    - name: Run Script file to create users
+      command: bash /home/vagrant/script.sh
+
+    - name: copy users files
+      copy: 
+        src: "{{ item.src }}" 
+        dest: "{{ item.dest }}"
+        group: "{{ item.user }}"
+        owner: "{{ item.user }}"
+        mode: "0755"
+      loop:
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ayham
+        dest: /home
+        user: ayham
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/F30s
+        dest: /home
+        user: F30s
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/root
+        dest: /
+        user: root
+
+    - name: Copy some other files
+      copy:
+        src: "{{ item.src }}" 
+        dest: "{{ item.dest }}"
+      loop:
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/etc_crontab
+        dest: /etc/crontab 
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/secret-tip.txt
+        dest: /
+      - src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/myapp.service
+        dest: /etc/systemd/system/myapp.service
+
+    - name: Change file ownership, group and permissions
+      file:
+        path: "{{ item.path }}"
+        mode: "{{ item.mode }}"
+      loop:
+        - path: /home/F30s/.profile
+          mode: "0666"
+        - path: /etc/environment  
+          mode: "0666"
+        - path: /home/
+          mode: "0755"
+
+
+    - name: Enable service httpd and ensure it is not masked
+      systemd:
+        name: myapp.service
+        enabled: true
+        masked: no
+        state: started
