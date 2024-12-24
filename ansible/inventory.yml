@@ -1,5 +1,0 @@
-# you should put your own ip addresses ...
-
-all:
-  hosts:
-    172.16.206.129

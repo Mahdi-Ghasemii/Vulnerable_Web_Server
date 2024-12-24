@@ -1,0 +1,73 @@
+2024-12-24 08:36:34,603 p=82409 u=mahdi n=ansible | ERROR! the playbook: playbooks/setup.yml could not be found
+2024-12-24 08:36:46,330 p=82727 u=mahdi n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2024-12-24 08:36:46,337 p=82727 u=mahdi n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************
+2024-12-24 08:36:47,788 p=82727 u=mahdi n=ansible | ok: [172.16.206.129]
+2024-12-24 08:36:47,796 p=82727 u=mahdi n=ansible | TASK [common : install Some Needed Packages] ***********************************************************************************************************************************************
+2024-12-24 08:36:49,235 p=82727 u=mahdi n=ansible | ok: [172.16.206.129]
+2024-12-24 08:36:49,246 p=82727 u=mahdi n=ansible | TASK [common : Install some python packages] ***********************************************************************************************************************************************
+2024-12-24 08:36:50,690 p=82727 u=mahdi n=ansible | ok: [172.16.206.129]
+2024-12-24 08:36:50,696 p=82727 u=mahdi n=ansible | TASK [common : Copy script file] ***********************************************************************************************************************************************************
+2024-12-24 08:36:51,416 p=82727 u=mahdi n=ansible | ok: [172.16.206.129]
+2024-12-24 08:36:51,424 p=82727 u=mahdi n=ansible | TASK [common : Run Script file to create users] ********************************************************************************************************************************************
+2024-12-24 08:36:51,875 p=82727 u=mahdi n=ansible | changed: [172.16.206.129]
+2024-12-24 08:36:51,881 p=82727 u=mahdi n=ansible | TASK [common : copy users files] ***********************************************************************************************************************************************************
+2024-12-24 08:36:52,387 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ayham', 'dest': '/home', 'user': 'ayham'})
+2024-12-24 08:36:53,307 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/F30s', 'dest': '/home', 'user': 'F30s'})
+2024-12-24 08:36:54,304 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/root', 'dest': '/', 'user': 'root'})
+2024-12-24 08:36:54,311 p=82727 u=mahdi n=ansible | TASK [common : Copy some other files] ******************************************************************************************************************************************************
+2024-12-24 08:36:54,812 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/etc_crontab', 'dest': '/etc/crontab'})
+2024-12-24 08:36:55,255 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/secret-tip.txt', 'dest': '/'})
+2024-12-24 08:36:55,699 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/myapp.service', 'dest': '/etc/systemd/system/myapp.service'})
+2024-12-24 08:36:55,704 p=82727 u=mahdi n=ansible | TASK [common : Change file ownership, group and permissions] *******************************************************************************************************************************
+2024-12-24 08:36:56,059 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'path': '/home/F30s/.profile', 'mode': '0666'})
+2024-12-24 08:36:56,332 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'path': '/etc/environment', 'mode': '0666'})
+2024-12-24 08:36:56,587 p=82727 u=mahdi n=ansible | ok: [172.16.206.129] => (item={'path': '/home/', 'mode': '0755'})
+2024-12-24 08:36:56,597 p=82727 u=mahdi n=ansible | TASK [common : Enable service httpd and ensure it is not masked] ***************************************************************************************************************************
+2024-12-24 08:36:57,294 p=82727 u=mahdi n=ansible | changed: [172.16.206.129]
+2024-12-24 08:36:57,308 p=82727 u=mahdi n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************
+2024-12-24 08:36:57,309 p=82727 u=mahdi n=ansible | 172.16.206.129             : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-24 08:44:22,570 p=91518 u=mahdi n=ansible | [WARNING]:  * Failed to parse /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ansible/inventory/inventory.yml with auto plugin: no root 'plugin' key found,
+'/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ansible/inventory/inventory.yml' is not a valid YAML inventory plugin config file
+
+2024-12-24 08:44:22,570 p=91518 u=mahdi n=ansible | [WARNING]:  * Failed to parse /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ansible/inventory/inventory.yml with yaml plugin: Invalid "hosts" entry for "all" group,
+requires a dictionary, found "<class 'ansible.parsing.yaml.objects.AnsibleSequence'>" instead.
+
+2024-12-24 08:44:22,570 p=91518 u=mahdi n=ansible | [WARNING]:  * Failed to parse /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ansible/inventory/inventory.yml with ini plugin: Invalid host pattern 'all:' supplied, ending
+in ':' is not allowed, this character is reserved to provide a port.
+
+2024-12-24 08:44:22,570 p=91518 u=mahdi n=ansible | [WARNING]: Unable to parse /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ansible/inventory/inventory.yml as an inventory source
+
+2024-12-24 08:44:22,571 p=91518 u=mahdi n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-12-24 08:44:22,573 p=91518 u=mahdi n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-12-24 08:44:22,688 p=91518 u=mahdi n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2024-12-24 08:44:22,688 p=91518 u=mahdi n=ansible | skipping: no hosts matched
+2024-12-24 08:44:22,688 p=91518 u=mahdi n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************
+2024-12-24 08:45:42,554 p=92940 u=mahdi n=ansible | PLAY [all] *********************************************************************************************************************************************************************************
+2024-12-24 08:45:42,561 p=92940 u=mahdi n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************************
+2024-12-24 08:45:43,990 p=92940 u=mahdi n=ansible | ok: [server1]
+2024-12-24 08:45:43,998 p=92940 u=mahdi n=ansible | TASK [common : install Some Needed Packages] ***********************************************************************************************************************************************
+2024-12-24 08:45:45,239 p=92940 u=mahdi n=ansible | ok: [server1]
+2024-12-24 08:45:45,244 p=92940 u=mahdi n=ansible | TASK [common : Install some python packages] ***********************************************************************************************************************************************
+2024-12-24 08:45:46,384 p=92940 u=mahdi n=ansible | ok: [server1]
+2024-12-24 08:45:46,392 p=92940 u=mahdi n=ansible | TASK [common : Copy script file] ***********************************************************************************************************************************************************
+2024-12-24 08:45:47,007 p=92940 u=mahdi n=ansible | ok: [server1]
+2024-12-24 08:45:47,012 p=92940 u=mahdi n=ansible | TASK [common : Run Script file to create users] ********************************************************************************************************************************************
+2024-12-24 08:45:47,383 p=92940 u=mahdi n=ansible | changed: [server1]
+2024-12-24 08:45:47,392 p=92940 u=mahdi n=ansible | TASK [common : copy users files] ***********************************************************************************************************************************************************
+2024-12-24 08:45:47,874 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/ayham', 'dest': '/home', 'user': 'ayham'})
+2024-12-24 08:45:48,728 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/F30s', 'dest': '/home', 'user': 'F30s'})
+2024-12-24 08:45:49,569 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/root', 'dest': '/', 'user': 'root'})
+2024-12-24 08:45:49,574 p=92940 u=mahdi n=ansible | TASK [common : Copy some other files] ******************************************************************************************************************************************************
+2024-12-24 08:45:50,046 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/etc_crontab', 'dest': '/etc/crontab'})
+2024-12-24 08:45:50,485 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/slash/secret-tip.txt', 'dest': '/'})
+2024-12-24 08:45:50,972 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'src': '/home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/myapp.service', 'dest': '/etc/systemd/system/myapp.service'})
+2024-12-24 08:45:50,977 p=92940 u=mahdi n=ansible | TASK [common : Change file ownership, group and permissions] *******************************************************************************************************************************
+2024-12-24 08:45:51,348 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'path': '/home/F30s/.profile', 'mode': '0666'})
+2024-12-24 08:45:51,591 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'path': '/etc/environment', 'mode': '0666'})
+2024-12-24 08:45:51,835 p=92940 u=mahdi n=ansible | ok: [server1] => (item={'path': '/home/', 'mode': '0755'})
+2024-12-24 08:45:51,840 p=92940 u=mahdi n=ansible | TASK [common : Enable service httpd and ensure it is not masked] ***************************************************************************************************************************
+2024-12-24 08:45:52,461 p=92940 u=mahdi n=ansible | ok: [server1]
+2024-12-24 08:45:52,475 p=92940 u=mahdi n=ansible | PLAY RECAP *********************************************************************************************************************************************************************************
+2024-12-24 08:45:52,475 p=92940 u=mahdi n=ansible | server1                    : ok=9    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

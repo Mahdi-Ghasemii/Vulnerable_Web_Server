@@ -1,0 +1,2 @@
+ansible_host: 172.16.206.129
+ansible_user: vagrant

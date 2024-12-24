@@ -1,9 +1,5 @@
 # ---
 
-- hosts: all
-  become: yes
-  remote_user: vagrant
-  tasks:
     # - name: Update package list
     #   ansible.builtin.apt:
     #     upgrade: yes
@@ -20,7 +16,7 @@
 
     - name: Copy script file
       copy:
-        src: /home/mahdi/Desktop/Mahdi/Mahdi/Projects/Vulnerable_Web_Server/script.sh
+        src: ../../../../script.sh
         dest: /home/vagrant/script.sh
         owner: vagrant
         group: vagrant
