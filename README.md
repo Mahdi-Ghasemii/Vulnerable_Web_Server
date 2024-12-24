@@ -6,8 +6,8 @@ This project sets up a simulated vulnerable web server challenge, ideal for prac
 
 The deployment can be done in two ways:
 
-    Using Docker: Simplified and containerized setup.
-    Using a Virtual Machine: Set up using Terraform and configured via Ansible.
+    # 1. Using Docker: Simplified and containerized setup.
+    # 2. Using a Virtual Machine: Set up using Terraform and configured via Ansible.
 
 Features
 
