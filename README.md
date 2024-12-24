@@ -1,4 +1,9 @@
-This project designed to set up a vulnerable web server challenge for cybersecurity practice and training. The server simulates vulnerabilities like **Server-Side Template Injection (SSTI)**, **Reverse Shell attacks**, and **Privilege Escalation via Cron Jobs**.
+# Vulnerable Web Server Challenge Deployment
+
+---
+
+
+A project designed to set up a vulnerable web server challenge for cybersecurity practice and training. The server simulates vulnerabilities like **Server-Side Template Injection (SSTI)**, **Reverse Shell attacks**, and **Privilege Escalation via Cron Jobs**.
 
 ## Features
 
