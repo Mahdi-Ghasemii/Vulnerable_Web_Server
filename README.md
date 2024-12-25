@@ -62,7 +62,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      ```
    - Check the terraform plan:
      ```bash
-    terraform plan
+     terraform plan
      ```
    - Apply the Terraform configuration:
      ```bash
@@ -80,11 +80,11 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
     ```bash
     vim /etc/ssh/sshd_config
      ```
-    And in this file , you should comment this line :
+        And in this file , you should comment this line :
     ```bash
     PasswordAuthentication no
     ```
-    And then restart ssh service :
+        And then restart ssh service :
     ```bash
     sudo systemctl restart ssh
     ```
