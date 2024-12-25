@@ -61,7 +61,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      terraform init
      ```
    - Check the terraform plan:
-     ```
+     ```bash
     terraform plan
      ``` 
    - Apply the Terraform configuration:
@@ -73,23 +73,23 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
 3. **Config ansible according to the virtal machine** :
    - Replace the values of ip and username written in the project: [server_info]
      ```bash
-        ansible_host: <your_vm_ip_address>
-        ansible_user: <your_vm_username>
+    ansible_host: <your_vm_ip_address>
+    ansible_user: <your_vm_username>
      ```
    - Allow password authentication in order to copy public key of our host to the machine
      ```bash
-        vim /etc/ssh/sshd_config
+    vim /etc/ssh/sshd_config
      ```
     And in this file , you should comment this line :
     ```bash
-        PasswordAuthentication no
+    PasswordAuthentication no
     ```
         And then restart ssh service :
     ```bash
-        sudo systemctl restart ssh
+    sudo systemctl restart ssh
     ```
    - Run this command on your host in order to Copy the host public key:
     ```bash
         ssh-copy-id <your_vm_username>@<your_vm_ip_address>
- 
- [server1]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
+    ```
+ [server_info]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
