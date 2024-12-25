@@ -84,12 +84,12 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
     ```bash
     PasswordAuthentication no
     ```
-        And then restart ssh service :
+    And then restart ssh service :
     ```bash
     sudo systemctl restart ssh
     ```
    - Run this command on your host in order to Copy the host public key:
     ```bash
-        ssh-copy-id <your_vm_username>@<your_vm_ip_address>
+    ssh-copy-id <your_vm_username>@<your_vm_ip_address>
     ```
  [server_info]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
