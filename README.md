@@ -71,7 +71,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      🛠️ Confirm to create the VM.
 
 3. **Config ansible according to the virtal machine** :
-   - Replace the values of ip and username written in the path: [server1.yml] (https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml)
+   - Replace the values of ip and username written in the path: [server1.yml] [server1]
      ```bash
         ansible_host: <your_vm_ip_address>
         ansible_user: <your_vm_username>
@@ -92,3 +92,4 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
     ```bash
         ssh-copy-id <your_vm_username>@<your_vm_ip_address>
  
+ [server1]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
