@@ -46,7 +46,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
 
 #### Steps:
 1. **Install VirutalBox on your system**
-    - install using apt:
+   - install using apt:
      ```bash
      sudo apt install virtualbox
      ```
@@ -62,7 +62,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      ```
    - Check the terraform plan:
      ```
-        terraform plan
+    terraform plan
      ``` 
    - Apply the Terraform configuration:
      ```bash
@@ -71,24 +71,24 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      🛠️ Confirm to create the VM.
 
 3. **Config ansible according to the virtal machine** :
-    - Replace the values of ip and username written in the path: [server1.yml] (ansible/inventory/host_vars/server1.yml)
+   - Replace the values of ip and username written in the path: [server1.yml] (https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml)
      ```bash
         ansible_host: <your_vm_ip_address>
         ansible_user: <your_vm_username>
      ```
-    - Allow password authentication in order to copy public key of our host to the machine
+   - Allow password authentication in order to copy public key of our host to the machine
      ```bash
         vim /etc/ssh/sshd_config
      ```
-        And in this file , you should comment this line :
-        ```bash
-            PasswordAuthentication no
-        ```
-            And then restart ssh service :
-        ```bash
-            sudo systemctl restart ssh
-        ```
-    - Run this command on your host in order to Copy the host public key:
+    And in this file , you should comment this line :
+    ```bash
+        PasswordAuthentication no
+    ```
+        And then restart ssh service :
+    ```bash
+        sudo systemctl restart ssh
+    ```
+   - Run this command on your host in order to Copy the host public key:
     ```bash
         ssh-copy-id <your_vm_username>@<your_vm_ip_address>
  
