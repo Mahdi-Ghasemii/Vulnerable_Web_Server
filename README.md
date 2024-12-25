@@ -60,7 +60,10 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
      ```bash
      terraform init
      ```
-    - 
+   - Check the terraform plan:
+     ```
+        terraform plan
+     ``` 
    - Apply the Terraform configuration:
      ```bash
      terraform apply
