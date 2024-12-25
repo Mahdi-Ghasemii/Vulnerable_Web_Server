@@ -63,7 +63,7 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
    - Check the terraform plan:
      ```bash
     terraform plan
-     ``` 
+     ```
    - Apply the Terraform configuration:
      ```bash
      terraform apply
@@ -72,12 +72,12 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
 
 3. **Config ansible according to the virtal machine** :
    - Replace the values of ip and username written in the project: [server_info]
-     ```bash
+    ```bash
     ansible_host: <your_vm_ip_address>
     ansible_user: <your_vm_username>
      ```
    - Allow password authentication in order to copy public key of our host to the machine
-     ```bash
+    ```bash
     vim /etc/ssh/sshd_config
      ```
     And in this file , you should comment this line :
