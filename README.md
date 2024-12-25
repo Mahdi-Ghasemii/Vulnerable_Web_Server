@@ -80,11 +80,11 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
     ```bash
     vim /etc/ssh/sshd_config
      ```
-        And in this file , you should comment this line :
+    And in this file , you should comment this line :
     ```bash
     PasswordAuthentication no
     ```
-        And then restart ssh service :
+    And then restart ssh service :
     ```bash
     sudo systemctl restart ssh
     ```
@@ -92,4 +92,22 @@ Welcome to the **Vulnerable Web Server Challenge**! This project sets up a simul
     ```bash
     ssh-copy-id <your_vm_username>@<your_vm_ip_address>
     ```
- [server_info]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
+
+
+2. **Configure the Virtual Machine**:
+   - Use Ansible to set up the environment:
+     ```bash
+     ansible-playbook ansible/playbooks/playbook.yml
+     ```
+
+3. **Access the Web Server**:
+   - Find the VM's IP (e.g., using `terraform output`).
+   - Navigate to:
+     ```
+     http://<vm_ip>:7777
+     ```
+   🌐 The web server is live and ready for testing!
+
+---
+
+     [server_info]: https://github.com/Mahdi-Ghasemii/Vulnerable_Web_Server/blob/master/ansible/inventory/host_vars/server1.yml
